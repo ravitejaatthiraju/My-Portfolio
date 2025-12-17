@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 186 100% 50%;
+    --primary-foreground: 240 10% 3.9%;
+
+    --secondary: 240 5% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 5% 18%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 18%;
+    --input: 240 5% 18%;
+    --ring: 186 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(186 100% 50%), hsl(217 91% 60%));
+    --gradient-bg: radial-gradient(ellipse at top, hsl(240 10% 8%) 0%, hsl(240 10% 3.9%) 100%);
+    
+    /* Glassmorphism */
+    --glass-bg: hsla(240, 10%, 6%, 0.7);
+    --glass-border: hsla(240, 5%, 25%, 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: var(--gradient-bg);
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .glow-button {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+
+  .glow-button::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: var(--gradient-primary);
+    filter: blur(20px);
+    z-index: -1;
+  }
+
+  .glow-button:hover::before {
+    @apply opacity-50;
+  }
+
+  .skill-tag {
+    @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-300;
+    background: hsla(186, 100%, 50%, 0.1);
+    border: 1px solid hsla(186, 100%, 50%, 0.3);
+    color: hsl(186 100% 70%);
+  }
+
+  .skill-tag:hover {
+    background: hsla(186, 100%, 50%, 0.2);
+    border-color: hsla(186, 100%, 50%, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .project-card {
+    @apply glass rounded-2xl overflow-hidden transition-all duration-500;
+  }
+
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -20px hsla(186, 100%, 50%, 0.3);
+  }
+
+  .social-icon {
+    @apply w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300;
+    background: hsla(240, 5%, 15%, 0.8);
+    border: 1px solid hsla(240, 5%, 25%, 0.5);
+  }
+
+  .social-icon:hover {
+    background: hsla(186, 100%, 50%, 0.15);
+    border-color: hsla(186, 100%, 50%, 0.5);
+    transform: scale(1.1);
+    color: hsl(186 100% 70%);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

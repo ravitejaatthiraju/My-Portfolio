@@ -41,7 +41,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl rotate-6" />
               <div className="absolute inset-0 glass rounded-3xl overflow-hidden">
                 <img 
-                   src="images/Prof pic.jpg"  /* Make sure this matches your file name in the public folder */
+                   src="Prof pic.jpg"  /* Make sure this matches your file name in the public folder */
                    alt="Atthiraju Raviteja" 
                    className="w-full h-full object-cover" 
        />

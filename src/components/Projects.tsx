@@ -31,15 +31,9 @@ const projects = [
     id: 3,
     title: 'Azure Demand Forecasting & Capacity Optimization',
     description: 'A full-stack end-to-end forecasting application that predicts Azure cloud resource usage using XGBoost, LSTM, and ARIMA models. Features a React dashboard for interactive visualization, model comparison, and capacity planning.',
-<<<<<<< HEAD
     image: azureImg,
     tags: ['React.js', 'Tailwind CSS', 'Lucide React', 'Python', 'Flask', 'Pandas & NumPy', 'Scikit-Learn'],
-    liveUrl: 'https://github.com/ravitejaatthiraju/Azure-Demand-Forecasting-Capacity-Optimization',
-=======
-    image: 'dist/images/Azure.png',
-    tags: ['React.js', 'Tailwind CSS', 'Lucide React','Python','Flask','Pandas & NumPy','Scikit-Learn'],
     liveUrl: 'https://azure-demand-forecasting-capacity-dr7o.onrender.com/',
->>>>>>> 42e97167a5a48dc968c85e5281e887ae205b9f26
     codeUrl: 'https://github.com/ravitejaatthiraju/Azure-Demand-Forecasting-Capacity-Optimization',
   },
   {

@@ -7,7 +7,7 @@ import aiSafetyShieldImg from '../assets/images/ai-safety-shield.png';
 import azureImg from '../assets/images/azure.png';
 import newYearImg from '../assets/images/new-year.jpg';
 import christmasImg from '../assets/images/christmas.jpg';
-import numberGameImg from '../assets/images/Number Game.png';
+import numberGameImg from '../assets/images/number-game.png';
 
 const projects = [
   {

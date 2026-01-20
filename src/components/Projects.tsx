@@ -7,6 +7,7 @@ import aiSafetyShieldImg from '../assets/images/ai-safety-shield.png';
 import azureImg from '../assets/images/azure.png';
 import newYearImg from '../assets/images/new-year.jpg';
 import christmasImg from '../assets/images/christmas.jpg';
+import numberGameImg from '../assets/images/Number Game.png';
 
 const projects = [
   {
@@ -58,7 +59,7 @@ const projects = [
     id: 6,
     title: 'Constraint-Driven Number Guessing Logic Game',
     description: 'A logic-based web game designed to avoid boredom by using meaningful constraints such as limited attempts, time pressure, and intelligent feedback.',
-    image: 'images/Number Game.png',
+    image: numberGameImg,
     tags: ['HTML', 'CSS', 'JavaScript'],
     liveUrl: 'https://ravitejaatthiraju.github.io/Constraint-Driven-Number-Guessing-Game/',
     codeUrl: 'https://github.com/ravitejaatthiraju/Constraint-Driven-Number-Guessing-Game',

@@ -41,13 +41,22 @@ const projects = [
 
   },
   {
-    id: 3,
+    id: 5,
     title: 'Christmas Celebration',
     description: 'Interactive Christmas webpage with snow, flying Santa animations, music, and gift box revealing inspiring quotes.',
     image: 'dist/images/christmas.jpg',
     tags: ['HTML5', 'CSS3', 'JavaScript'],
     liveUrl: 'https://ravitejaatthiraju.github.io/CHRISTMAS-PROJECT/',
     codeUrl: 'https://github.com/ravitejaatthiraju/CHRISTMAS-PROJECT',
+  },
+  {
+    id: 6,
+    title: 'Constraint-Driven Number Guessing Logic Game',
+    description: 'A logic-based web game designed to avoid boredom by using meaningful constraints such as limited attempts, time pressure, and intelligent feedback.',
+    image: 'images/Number Game.png',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    liveUrl: 'https://ravitejaatthiraju.github.io/Constraint-Driven-Number-Guessing-Game/',
+    codeUrl: 'https://github.com/ravitejaatthiraju/Constraint-Driven-Number-Guessing-Game',
   },
 ];
 

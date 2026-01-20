@@ -2,13 +2,19 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, ExternalLink, Github } from 'lucide-react';
 
+import loginSystemImg from '../assets/images/login-system.png';
+import aiSafetyShieldImg from '../assets/images/ai-safety-shield.png';
+import azureImg from '../assets/images/azure.png';
+import newYearImg from '../assets/images/new-year.jpg';
+import christmasImg from '../assets/images/christmas.jpg';
+
 const projects = [
   {
     id: 1,
     title: 'Authenticated Login System',
     description: 'A full-stack authentication system featuring secure Email/Password login and OAuth 2.0 integration for Google and LinkedIn.',
-    image: 'dist/images/Login System.png',
-    tags: ['HTML5', 'Tailwind CSS', 'JavaScript (Fetch API)', 'Flask', 'Python 3','OAuth 2.0 (OpenID Connect)','Gunicorn (Production WSGI server)'],
+    image: loginSystemImg,
+    tags: ['HTML5', 'Tailwind CSS', 'JavaScript (Fetch API)', 'Flask', 'Python 3', 'OAuth 2.0 (OpenID Connect)', 'Gunicorn (Production WSGI server)'],
     liveUrl: 'https://ravitejaatthiraju.github.io/flask-login-system/',
     codeUrl: 'https://github.com/ravitejaatthiraju/flask-login-system',
   },
@@ -16,8 +22,8 @@ const projects = [
     id: 2,
     title: 'AI Safety Shield',
     description: 'AI Safety Shield is a real-time multimodal surveillance system that uses computer vision and audio analysis to detect weapons, distress sounds, aggressive behavior, and overcrowding, and instantly alerts administrators via a live dashboard and email.',
-    image: 'dist/images/AI Safety Shield (2).png',
-    tags: ['Flask', 'OpenCV', 'Ultralytics YOLOv8','MediaPipe','SpeechRecognition','Python','React.js','Tailwind CSS'],
+    image: aiSafetyShieldImg,
+    tags: ['Flask', 'OpenCV', 'Ultralytics YOLOv8', 'MediaPipe', 'SpeechRecognition', 'Python', 'React.js', 'Tailwind CSS'],
     liveUrl: 'https://github.com/ravitejaatthiraju/AI-Safety-Shield',
     codeUrl: 'https://github.com/ravitejaatthiraju/AI-Safety-Shield',
   },
@@ -25,26 +31,25 @@ const projects = [
     id: 3,
     title: 'Azure Demand Forecasting & Capacity Optimization',
     description: 'A full-stack end-to-end forecasting application that predicts Azure cloud resource usage using XGBoost, LSTM, and ARIMA models. Features a React dashboard for interactive visualization, model comparison, and capacity planning.',
-    image: 'dist/images/Azure.png',
-    tags: ['React.js', 'Tailwind CSS', 'Lucide React','Python','Flask','Pandas & NumPy','Scikit-Learn'],
-    liveUrl: 'https://github.com/ravitejaatthiraju/Azure-Demand-Forecasting-Capacity-Optimization',
+    image: azureImg,
+    tags: ['React.js', 'Tailwind CSS', 'Lucide React', 'Python', 'Flask', 'Pandas & NumPy', 'Scikit-Learn'],
+    liveUrl: 'https://azure-demand-forecasting-capacity-dr7o.onrender.com/',
     codeUrl: 'https://github.com/ravitejaatthiraju/Azure-Demand-Forecasting-Capacity-Optimization',
   },
   {
     id: 4,
     title: 'NEW YEAR PROJECT',
     description: 'A celebratory webpage featuring a live countdown to 2026 accompanied by animated fireworks effects.',
-    image: 'dist/images/new year.jpg',
+    image: newYearImg,
     tags: ['HTML5', 'CSS3', 'JavaScript (Canvas API)'],
     liveUrl: 'https://ravitejaatthiraju.github.io/NEW-YEAR-PROJECT/',
     codeUrl: 'https://github.com/ravitejaatthiraju/NEW-YEAR-PROJECT',
-
   },
   {
     id: 5,
     title: 'Christmas Celebration',
     description: 'Interactive Christmas webpage with snow, flying Santa animations, music, and gift box revealing inspiring quotes.',
-    image: 'dist/images/christmas.jpg',
+    image: christmasImg,
     tags: ['HTML5', 'CSS3', 'JavaScript'],
     liveUrl: 'https://ravitejaatthiraju.github.io/CHRISTMAS-PROJECT/',
     codeUrl: 'https://github.com/ravitejaatthiraju/CHRISTMAS-PROJECT',
@@ -126,13 +131,13 @@ const Projects = () => {
                   className="project-card min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)]"
                 >
                   {/* Project Image */}
-<div className="h-48 overflow-hidden">
-  <img 
-    src={project.image} 
-    alt={project.title} 
-    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
-  />
-</div>
+                  <div className="h-48 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
 
                   {/* Project Content */}
                   <div className="p-6">
@@ -186,11 +191,10 @@ const Projects = () => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex
-                    ? 'w-8 bg-gradient-to-r from-primary to-accent'
-                    : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
-                }`}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentIndex
+                  ? 'w-8 bg-gradient-to-r from-primary to-accent'
+                  : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                  }`}
               />
             ))}
           </div>
